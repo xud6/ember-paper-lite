@@ -108,7 +108,7 @@
     "demoURL": "https://miguelcobain.github.io/ember-paper",
     "before": "ember-cli-sri",
     "versionCompatibility": {
-      "ember": ">=2.3.0"
+      "ember": ">=3.20.0"
     }
   }
 }
