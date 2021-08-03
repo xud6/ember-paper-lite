@@ -372,11 +372,7 @@ module.exports = {
 
       }
     } else if (type === 'body-footer') {
-      let response = null;
-      let emberPowerSelect = this.addons.filter(function(addon) {
-        return addon.name === 'ember-power-select';
-      })[0];
-      response = emberPowerSelect.contentFor(type, config);
+      let response = '';
       if (config.environment !== 'test' &&  !config._emberPaperContentForInvoked) {
         config._emberPaperContentForInvoked = true;
         response = `
