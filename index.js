@@ -103,7 +103,6 @@ const componentDependencies = {
   'paper-form': {
     dependencies: [
       'paper-input',
-      'paper-select',
       'paper-autocomplete',
       'paper-button'
     ]
@@ -203,35 +202,6 @@ const componentDependencies = {
   'paper-radio-group': {
     dependencies: [
       'paper-radio'
-    ]
-  },
-
-  'paper-select': {
-    styles: [
-      'components/select/select.scss',
-      'components/select/select-theme.scss'
-    ],
-    dependencies: [
-      'paper-select/ebd-trigger',
-      'paper-select/eps-trigger',
-      'paper-select/ebd-content',
-      'paper-select/options',
-      'paper-select/search',
-      'paper-select/no-matches-message',
-      'paper-select/search-message',
-    ]
-  },
-
-  'paper-select/options': {
-    dependencies: [
-      'paper-progress-circular',
-      'paper-select/option'
-    ]
-  },
-
-  'paper-select/ebd-content': {
-    dependencies: [
-      'paper-backdrop'
     ]
   },
 

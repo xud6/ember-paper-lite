@@ -303,44 +303,4 @@ module('Integration | Component | paper form', function(hooks) {
     assert.dom('.custom-input')
       .exists({ count: 1 }, 'custom input-component is displayed');
   });
-
-  test('yielded form.select renders `paper-select`-component', async function(assert) {
-    assert.expect(1);
-
-    this.owner.register('component:paper-select', Component.extend({
-      classNames: ['paper-select']
-    }));
-
-    await render(hbs`
-      {{#paper-form as |form|}}
-        {{form.select}}
-      {{/paper-form}}
-    `);
-
-    assert.dom('.paper-select')
-      .exists({ count: 1 }, 'paper-select is displayed');
-  });
-
-  test('yielded form.select can be customized by passing `selectComponent`', async function(assert) {
-    assert.expect(2);
-
-    this.owner.register('component:paper-select', Component.extend({
-      classNames: ['paper-select']
-    }));
-
-    this.owner.register('component:custom-select', Component.extend({
-      classNames: ['custom-select']
-    }));
-
-    await render(hbs`
-      {{#paper-form selectComponent="custom-select" as |form|}}
-        {{form.select}}
-      {{/paper-form}}
-    `);
-
-    assert.dom('.paper-select')
-      .doesNotExist('paper-select component is not displayed');
-    assert.dom('.custom-select')
-      .exists({ count: 1 }, 'custom select-component is displayed');
-  });
 });
