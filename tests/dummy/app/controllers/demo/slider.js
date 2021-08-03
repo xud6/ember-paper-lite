@@ -12,7 +12,7 @@ export default Controller.extend({
   color,
 
   colorStyle: computed('color.{red,green,blue}', function() {
-    return htmlSafe(`border: 1px solid #333; background: rgb(${this.get('color.red')}, ${this.get('color.green')}, ${this.get('color.blue')})`);
+    return htmlSafe(`border: 1px solid #333; background: rgb(${this.color.red}, ${this.color.green}, ${this.color.blue})`);
   }),
 
   rating1: 3,

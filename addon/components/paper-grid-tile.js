@@ -40,7 +40,7 @@ export default Component.extend(ChildMixin, {
 
   didUpdateAttrs() {
     this._super(...arguments);
-    let gridList = this.get('gridList');
+    let gridList = this.gridList;
 
     // Debounces until the next run loop
     run.debounce(gridList, gridList.updateGrid, 0);
@@ -52,32 +52,32 @@ export default Component.extend(ChildMixin, {
   },
 
   colspanMedia: computed('colspan', function() {
-    return this.get('gridList')._extractResponsiveSizes(this.get('colspan'));
+    return this.gridList._extractResponsiveSizes(this.colspan);
   }),
 
   currentColspan: computed('colspanMedia', 'gridList.currentMedia.[]', function() {
-    let colspan = this.get('gridList')._getAttributeForMedia(this.get('colspanMedia'), this.get('gridList.currentMedia'));
+    let colspan = this.gridList._getAttributeForMedia(this.colspanMedia, this.gridList.currentMedia);
     return parseInt(colspan, 10) || 1;
   }),
 
   rowspanMedia: computed('rowspan', function() {
-    return this.get('gridList')._extractResponsiveSizes(this.get('rowspan'));
+    return this.gridList._extractResponsiveSizes(this.rowspan);
   }),
 
   currentRowspan: computed('rowspanMedia', 'gridList.currentMedia.[]', function() {
-    let rowspan = this.get('gridList')._getAttributeForMedia(this.get('rowspanMedia'), this.get('gridList.currentMedia'));
+    let rowspan = this.gridList._getAttributeForMedia(this.rowspanMedia, this.gridList.currentMedia);
     return parseInt(rowspan, 10) || 1;
   }),
 
   _tileStyle() {
-    let position = this.get('position');
-    let currentColspan = this.get('currentColspan');
-    let currentRowspan = this.get('currentRowspan');
-    let rowCount = this.get('gridList.rowCount');
-    let colCount = this.get('gridList.currentCols');
-    let gutter = this.get('gridList.currentGutter');
-    let rowMode = this.get('gridList.currentRowMode');
-    let rowHeight = this.get('gridList.currentRowHeight');
+    let position = this.position;
+    let currentColspan = this.currentColspan;
+    let currentRowspan = this.currentRowspan;
+    let rowCount = this.gridList.rowCount;
+    let colCount = this.gridList.currentCols;
+    let gutter = this.gridList.currentGutter;
+    let rowMode = this.gridList.currentRowMode;
+    let rowHeight = this.gridList.currentRowHeight;
 
     // Percent of the available horizontal space that one column takes up.
     let hShare = (1 / colCount) * 100;

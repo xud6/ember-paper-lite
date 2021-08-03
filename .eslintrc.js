@@ -22,7 +22,6 @@ module.exports = {
   },
   rules: {
     'ember/no-mixins': 'off',
-    'ember/no-get': 'off',
     'ember/require-computed-property-dependencies': 'off',
     'ember/use-ember-data-rfc-395-imports': 'off',
     'ember/no-jquery': 'error',

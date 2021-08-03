@@ -5,7 +5,7 @@ import { inject as service } from '@ember/service';
 
 import Component from '@ember/component';
 import { assert } from '@ember/debug';
-import { get, computed } from '@ember/object';
+import { computed } from '@ember/object';
 import { run } from '@ember/runloop';
 import { htmlSafe } from '@ember/string';
 import layout from '../templates/components/paper-switch';
@@ -36,11 +36,11 @@ export default Component.extend(FocusableMixin, ColorMixin, ProxiableMixin, {
   dragging: false,
 
   thumbContainerStyle: computed('dragging', 'dragAmount', function() {
-    if (!this.get('dragging')) {
+    if (!this.dragging) {
       return htmlSafe('');
     }
 
-    let translate = Math.max(0, Math.min(100, this.get('dragAmount') * 100));
+    let translate = Math.max(0, Math.min(100, this.dragAmount * 100));
     let transformProp = `translate3d(${translate}%, 0, 0)`;
     return htmlSafe(`transform: ${transformProp};-webkit-transform: ${transformProp}`);
   }),
@@ -49,14 +49,14 @@ export default Component.extend(FocusableMixin, ColorMixin, ProxiableMixin, {
     this._super(...arguments);
 
     // Only setup if the switch is not disabled
-    if (!this.get('disabled')) {
+    if (!this.disabled) {
       this._setupSwitch();
     }
   },
 
   init() {
     this._super(...arguments);
-    assert('{{paper-switch}} requires an `onChange` action or null for no action.', this.get('onChange') !== undefined);
+    assert('{{paper-switch}} requires an `onChange` action or null for no action.', this.onChange !== undefined);
   },
 
   willDestroyElement() {
@@ -67,11 +67,11 @@ export default Component.extend(FocusableMixin, ColorMixin, ProxiableMixin, {
   didUpdateAttrs() {
     this._super(...arguments);
 
-    if (!this.get('disabled') && !this._switchContainerHammer) {
+    if (!this.disabled && !this._switchContainerHammer) {
       this._setupSwitch();
-    } else if (!this.get('disabled') && this._switchContainerHammer) {
+    } else if (!this.disabled && this._switchContainerHammer) {
       this._switchContainerHammer.set({ enable: true });
-    } else if (this.get('disabled') && this._switchContainerHammer) {
+    } else if (this.disabled && this._switchContainerHammer) {
       this._switchContainerHammer.set({ enable: false });
     }
   },
@@ -101,7 +101,7 @@ export default Component.extend(FocusableMixin, ColorMixin, ProxiableMixin, {
   },
 
   _handleNativeClick(ev) {
-    let bubbles = get(this, 'bubbles');
+    let bubbles = this.bubbles;
 
     if (!bubbles) {
       ev.stopPropagation();
@@ -121,23 +121,23 @@ export default Component.extend(FocusableMixin, ColorMixin, ProxiableMixin, {
   },
 
   _dragStart() {
-    this.set('dragAmount', +this.get('value'));
+    this.set('dragAmount', +this.value);
     this.set('dragging', true);
   },
 
   _drag(event) {
-    if (!this.get('disabled')) {
+    if (!this.disabled) {
       // Set the amount the switch has been dragged
-      this.set('dragAmount', +this.get('value') + event.deltaX / this.get('switchWidth'));
+      this.set('dragAmount', +this.value + event.deltaX / this.switchWidth);
     }
   },
 
   _dragEnd() {
-    if (!this.get('disabled')) {
-      let value = this.get('value');
-      let dragAmount = this.get('dragAmount');
+    if (!this.disabled) {
+      let value = this.value;
+      let dragAmount = this.dragAmount;
 
-      if (!this.get('dragging') || (value && dragAmount < 0.5) || (!value && dragAmount > 0.5)) {
+      if (!this.dragging || (value && dragAmount < 0.5) || (!value && dragAmount > 0.5)) {
         invokeAction(this, 'onChange', !value);
       }
       this.set('dragging', false);
@@ -147,20 +147,20 @@ export default Component.extend(FocusableMixin, ColorMixin, ProxiableMixin, {
 
   focusIn() {
     // Focusing in w/o being pressed should use the default behavior
-    if (!this.get('pressed')) {
+    if (!this.pressed) {
       this._super(...arguments);
     }
   },
 
   keyPress(ev) {
-    if (ev.which === this.get('constants.KEYCODE.SPACE') || ev.which === this.get('constants.KEYCODE.ENTER')) {
+    if (ev.which === this.constants.KEYCODE.SPACE || ev.which === this.constants.KEYCODE.ENTER) {
       ev.preventDefault();
       this._dragEnd();
     }
   },
 
   processProxy() {
-    invokeAction(this, 'onChange', !this.get('value'));
+    invokeAction(this, 'onChange', !this.value);
   }
 
 });

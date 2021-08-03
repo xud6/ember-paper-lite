@@ -18,15 +18,15 @@ export default Component.extend(TransitionMixin, {
   show: bool('style'),
 
   positionClass: computed('position', function() {
-    return `md-origin-${this.get('position')}`;
+    return `md-origin-${this.position}`;
   }),
 
   didInsertElement() {
     this._super(...arguments);
     run.schedule('afterRender', () => {
       if (!this.isDestroyed) {
-        let anchorElement = this.get('anchorElement');
-        let pos = calculateTooltipPosition(this.element, anchorElement, this.get('position'));
+        let anchorElement = this.anchorElement;
+        let pos = calculateTooltipPosition(this.element, anchorElement, this.position);
         this.set('style', htmlSafe(`top: ${pos.top}px; left: ${pos.left}px`));
         this.set('hide', true);
         nextTick().then(nextTick).then(nextTick).then(nextTick).then(() => {

@@ -16,12 +16,12 @@ export default Component.extend({
   attributeBindings: ['style'],
 
   style: computed('elementDidRender', 'speedDial.{animation,open,direction}', function() {
-    if (!this.get('elementDidRender')) {
+    if (!this.elementDidRender) {
       return;
     }
 
-    let animation = this.get('speedDial.animation');
-    let open = this.get('speedDial.open');
+    let animation = this.speedDial.animation;
+    let open = this.speedDial.open;
     if (animation === 'fling') {
       if (!open) {
         return this.flingClosed();
@@ -39,8 +39,8 @@ export default Component.extend({
   },
 
   scaleClosed() {
-    let items = this.get('speedDial.element').querySelectorAll('.md-fab-action-item');
-    let open = this.get('speedDial.open');
+    let items = this.speedDial.element.querySelectorAll('.md-fab-action-item');
+    let open = this.speedDial.open;
     let index = getElementIndex(this.element);
     let delay = 65;
     let offsetDelay = index * delay;
@@ -57,8 +57,8 @@ export default Component.extend({
   },
 
   flingClosed() {
-    let triggerElement = this.get('speedDial.element').querySelector('md-fab-trigger');
-    let direction = this.get('speedDial.direction');
+    let triggerElement = this.speedDial.element.querySelector('md-fab-trigger');
+    let direction = this.speedDial.direction;
     let index = getElementIndex(this.element);
 
     // Make sure to account for differences in the dimensions of the trigger verses the items

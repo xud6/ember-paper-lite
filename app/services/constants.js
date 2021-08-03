@@ -6,15 +6,15 @@ export default Service.extend({
   sniffer: service('sniffer'),
 
   webkit: computed(function() {
-    return /webkit/i.test(this.get('sniffer.vendorPrefix'));
+    return /webkit/i.test(this.sniffer.vendorPrefix);
   }),
 
   vendorProperty(name) {
-    return this.get('webkit') ? `-webkit-${name.charAt(0)}${name.substring(1)}` : name;
+    return this.webkit ? `-webkit-${name.charAt(0)}${name.substring(1)}` : name;
   },
 
   CSS: computed('webkit', function() {
-    let webkit = this.get('webkit');
+    let webkit = this.webkit;
     return {
       /* Constants */
       TRANSITIONEND: `transitionend${webkit ? ' webkitTransitionEnd' : ''}`,

@@ -35,7 +35,7 @@ export default Component.extend(FocusableMixin, ParentMixin, {
   // Lifecycle hooks
   init() {
     this._super(...arguments);
-    assert('{{paper-radio-group}} requires an `onChange` action or null for no action', this.get('onChange') !== undefined);
+    assert('{{paper-radio-group}} requires an `onChange` action or null for no action', this.onChange !== undefined);
   },
 
   attributeBindings: [
@@ -50,13 +50,13 @@ export default Component.extend(FocusableMixin, ParentMixin, {
   keyDown(ev) {
 
     switch (ev.which) {
-      case this.get('constants.KEYCODE.LEFT_ARROW'):
-      case this.get('constants.KEYCODE.UP_ARROW'):
+      case this.constants.KEYCODE.LEFT_ARROW:
+      case this.constants.KEYCODE.UP_ARROW:
         ev.preventDefault();
         this.select(-1);
         break;
-      case this.get('constants.KEYCODE.RIGHT_ARROW'):
-      case this.get('constants.KEYCODE.DOWN_ARROW'):
+      case this.constants.KEYCODE.RIGHT_ARROW:
+      case this.constants.KEYCODE.DOWN_ARROW:
         ev.preventDefault();
         this.select(1);
         break;
@@ -64,17 +64,17 @@ export default Component.extend(FocusableMixin, ParentMixin, {
   },
 
   select(increment) {
-    let groupValue = this.get('groupValue');
+    let groupValue = this.groupValue;
     let index = 0;
 
     if (isPresent(groupValue)) {
-      index = this.get('childValues').indexOf(groupValue);
+      index = this.childValues.indexOf(groupValue);
       index += increment;
-      let length = this.get('childValues.length');
+      let length = this.childValues.length;
       index = ((index % length) + length) % length;
     }
 
-    let childRadio = this.get('enabledChildRadios').objectAt(index);
+    let childRadio = this.enabledChildRadios.objectAt(index);
     childRadio.set('focused', true);
     invokeAction(this, 'onChange', childRadio.get('value'));
   },

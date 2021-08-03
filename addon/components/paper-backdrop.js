@@ -25,7 +25,7 @@ export default Component.extend(TransitionMixin, {
   shouldTransition: bool('opaque'),
 
   backdropStyle: computed('fixed', function() {
-    return this.get('fixed') ? htmlSafe('position:fixed;') : null;
+    return this.fixed ? htmlSafe('position:fixed;') : null;
   }),
 
   addDestroyedElementClone(original, clone) {

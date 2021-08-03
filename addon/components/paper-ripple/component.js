@@ -222,7 +222,7 @@ class PaperRipple extends Component {
     let height = this.rippleElement.clientHeight;
     let x = Math.max(Math.abs(width - left), left) * 2;
     let y = Math.max(Math.abs(height - top), top) * 2;
-    let size = getSize(this.get('fitRipple'), x, y);
+    let size = getSize(this.fitRipple, x, y);
     let color = this.color();
 
     let rippleCss = `

@@ -32,7 +32,7 @@ export default Component.extend(TransitionMixin, {
   tabindex: -1,
 
   positionClass: computed('position', function() {
-    return `md-sidenav-${this.get('position')}`;
+    return `md-sidenav-${this.position}`;
   }),
 
   init() {
@@ -42,7 +42,7 @@ export default Component.extend(TransitionMixin, {
       this.updateLockedOpen();
     }
     this._super(...arguments);
-    this.get('paperSidenav').register(this.get('name'), this);
+    this.paperSidenav.register(this.name, this);
   },
 
   didInsertElement() {
@@ -62,13 +62,13 @@ export default Component.extend(TransitionMixin, {
   willDestroyElement() {
     this._super(...arguments);
     window.removeEventListener('resize', this._updateOnResize);
-    this.get('paperSidenav').unregister(this.get('name'), this);
+    this.paperSidenav.unregister(this.name, this);
     this._updateOnResize = null;
   },
 
   updateLockedOpen() {
 
-    let lockedOpen = this.get('lockedOpen');
+    let lockedOpen = this.lockedOpen;
     let isLockedOpen;
 
     // if `true` or `false` is specified, always/never "lock open"
@@ -76,44 +76,44 @@ export default Component.extend(TransitionMixin, {
     if (typeof lockedOpen === 'boolean') {
       isLockedOpen = lockedOpen;
     } else {
-      let mediaQuery = this.get('constants').MEDIA[lockedOpen] || lockedOpen;
+      let mediaQuery = this.constants.MEDIA[lockedOpen] || lockedOpen;
       isLockedOpen = window.matchMedia(mediaQuery).matches;
     }
 
-    let coercedIsLockedOpen = !!this.get('isLockedOpen');
+    let coercedIsLockedOpen = !!this.isLockedOpen;
 
     if (coercedIsLockedOpen !== isLockedOpen) {
       this.set('isLockedOpen', isLockedOpen);
 
       // if sidenav is open and we enter lockedOpen,
       // make the sidenav enter the "closed" state
-      if (!this.get('closed') && isLockedOpen) {
+      if (!this.closed && isLockedOpen) {
         invokeAction(this, 'onToggle', false);
       }
     }
   },
 
   click() {
-    if (this.get('closeOnClick') && !this.get('isLockedOpen')) {
+    if (this.closeOnClick && !this.isLockedOpen) {
       invokeAction(this, 'onToggle', false);
     }
   },
 
   open() {
-    if (this.get('closed') && this.get('isLockedOpen')) {
+    if (this.closed && this.isLockedOpen) {
       invokeAction(this, 'onToggle', true);
     }
   },
 
   close() {
-    if (!this.get('closed') && !this.get('isLockedOpen')) {
+    if (!this.closed && !this.isLockedOpen) {
       invokeAction(this, 'onToggle', false);
     }
   },
 
   toggle() {
-    if (!this.get('isLockedOpen')) {
-      invokeAction(this, 'onToggle', this.get('closed'));
+    if (!this.isLockedOpen) {
+      invokeAction(this, 'onToggle', this.closed);
     }
   }
 });

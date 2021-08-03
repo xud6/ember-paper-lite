@@ -37,16 +37,16 @@ export default Component.extend(FocusableMixin, ColorMixin, {
 
   // Lifecycle hooks
   init() {
-    assert('{{paper-radio}} requires an `onChange` action or null for no action.', this.get('onChange') !== undefined);
+    assert('{{paper-radio}} requires an `onChange` action or null for no action.', this.onChange !== undefined);
     this._super(...arguments);
   },
 
   checked: computed('groupValue', 'value', function() {
-    return this.get('groupValue') === this.get('value');
+    return this.groupValue === this.value;
   }),
 
   ariaChecked: computed('checked', function() {
-    return this.get('checked') ? 'true' : 'false';
+    return this.checked ? 'true' : 'false';
   }),
 
   labelId: computed('elementId', function() {
@@ -54,14 +54,14 @@ export default Component.extend(FocusableMixin, ColorMixin, {
   }),
 
   click() {
-    if (!this.get('disabled')) {
-      if (this.get('toggle')) {
-        invokeAction(this, 'onChange', this.get('checked') ? null : this.get('value'));
+    if (!this.disabled) {
+      if (this.toggle) {
+        invokeAction(this, 'onChange', this.checked ? null : this.value);
       } else {
-        invokeAction(this, 'onChange', this.get('value'));
+        invokeAction(this, 'onChange', this.value);
       }
     }
     // Prevent bubbling, if specified. If undefined, the event will bubble.
-    return this.get('bubbles');
+    return this.bubbles;
   }
 });

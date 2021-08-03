@@ -108,7 +108,7 @@ export default Controller.extend({
   }),
 
   recalculateColorTiles() {
-    let tiles = this.get('colorTiles');
+    let tiles = this.colorTiles;
     for (let i = 0; i < 46; i++) {
       tiles[i].set('colspan', randomSpan());
       tiles[i].set('rowspan', randomSpan());

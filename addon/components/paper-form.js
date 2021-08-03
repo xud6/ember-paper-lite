@@ -23,11 +23,11 @@ export default Component.extend(ParentMixin, {
 
   isValid: not('isInvalid'),
   isInvalid: computed('childComponents.@each.isInvalid', function() {
-    return this.get('childComponents').isAny('isInvalid');
+    return this.childComponents.isAny('isInvalid');
   }),
 
   isTouched: computed('childComponents.@each.isTouched', function() {
-    return this.get('childComponents').isAny('isTouched');
+    return this.childComponents.isAny('isTouched');
   }),
 
   isInvalidAndTouched: and('isInvalid', 'isTouched'),
@@ -39,19 +39,19 @@ export default Component.extend(ParentMixin, {
 
   actions: {
     onValidityChange() {
-      if (this.get('lastIsValid') !== this.get('isValid') || this.get('lastIsTouched') !== this.get('isTouched')) {
-        invokeAction(this, 'onValidityChange', this.get('isValid'), this.get('isTouched'), this.get('isInvalidAndTouched'));
-        this.set('lastIsValid', this.get('isValid'));
-        this.set('lastIsTouched', this.get('isTouched'));
+      if (this.lastIsValid !== this.isValid || this.lastIsTouched !== this.isTouched) {
+        invokeAction(this, 'onValidityChange', this.isValid, this.isTouched, this.isInvalidAndTouched);
+        this.set('lastIsValid', this.isValid);
+        this.set('lastIsTouched', this.isTouched);
       }
     },
     onSubmit() {
-      if (this.get('isInvalid')) {
-        this.get('childComponents').setEach('isTouched', true);
+      if (this.isInvalid) {
+        this.childComponents.setEach('isTouched', true);
         invokeAction(this, 'onInvalid');
       } else {
         invokeAction(this, 'onSubmit');
-        this.get('childComponents').setEach('isTouched', false);
+        this.childComponents.setEach('isTouched', false);
       }
     }
   }

@@ -30,7 +30,7 @@ export default Component.extend(TransitionMixin, {
   classNameBindings: ['left:md-left:md-right', 'top:md-top:md-bottom', 'capsule:md-capsule', 'dragging:md-dragging'],
 
   style: computed('x', function() {
-    return htmlSafe(`transform:translate(${ this.get('x') }px, 0)`);
+    return htmlSafe(`transform:translate(${ this.x }px, 0)`);
   }),
 
   setValueFromEvent(event) {
@@ -57,7 +57,7 @@ export default Component.extend(TransitionMixin, {
 
   didInsertElement() {
     this._super(...arguments);
-    if (this.get('swipeToClose')) {
+    if (this.swipeToClose) {
       this._setupHammer();
     }
   },
@@ -65,10 +65,10 @@ export default Component.extend(TransitionMixin, {
   didUpdateAttrs() {
     this._super(...arguments);
 
-    if (this.get('swipeToClose') && !this._hammer) {
+    if (this.swipeToClose && !this._hammer) {
       // if it is enabled and we didn't init hammer yet
       this._setupHammer();
-    } else if (!this.get('swipeToClose') && this._hammer) {
+    } else if (!this.swipeToClose && this._hammer) {
       // if it is disabled and we did init hammer already
       this._teardownHammer();
     }
@@ -87,7 +87,7 @@ export default Component.extend(TransitionMixin, {
   },
 
   dragStart(event) {
-    if (!this.get('swipeToClose')) {
+    if (!this.swipeToClose) {
       return;
     }
 
@@ -99,7 +99,7 @@ export default Component.extend(TransitionMixin, {
   },
 
   drag(event) {
-    if (!this.get('swipeToClose') || !this.get('dragging')) {
+    if (!this.swipeToClose || !this.dragging) {
       return;
     }
 
@@ -107,7 +107,7 @@ export default Component.extend(TransitionMixin, {
   },
 
   dragEnd() {
-    if (!this.get('swipeToClose')) {
+    if (!this.swipeToClose) {
       return;
     }
 

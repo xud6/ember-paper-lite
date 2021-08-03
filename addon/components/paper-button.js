@@ -45,7 +45,7 @@ export default Component.extend(FocusableMixin, ColorMixin, ProxiableMixin, {
 
   init() {
     this._super(...arguments);
-    if (this.get('href')) {
+    if (this.href) {
       this.setProperties({
         tagName: 'a',
         type: null
@@ -56,6 +56,6 @@ export default Component.extend(FocusableMixin, ColorMixin, ProxiableMixin, {
   click(e) {
     invokeAction(this, 'onClick', e);
     // Prevent bubbling, if specified. If undefined, the event will bubble.
-    return this.get('bubbles');
+    return this.bubbles;
   }
 });

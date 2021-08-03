@@ -43,7 +43,7 @@ module('Integration | Component | paper reset button', function(hooks) {
 
     assert.dom('form .reset-btn').hasAttribute('type', 'button', 'reset-button has type="button"');
     await click('form .reset-btn');
-    assert.ok(this.get('resetClicked'), 'The reset button was clicked');
-    assert.notOk(this.get('formSubmitted'), 'The outer form should not be submitted when the reset button is clicked');
+    assert.ok(this.resetClicked, 'The reset button was clicked');
+    assert.notOk(this.formSubmitted, 'The outer form should not be submitted when the reset button is clicked');
   });
 });

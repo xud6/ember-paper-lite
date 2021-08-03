@@ -9,7 +9,7 @@ export default Component.extend(TransitionMixin, {
   onReset: null,
 
   mouseUp(e) {
-    let onReset = this.get('onReset');
+    let onReset = this.onReset;
     if (onReset === null) {
       return;
     }
@@ -18,8 +18,8 @@ export default Component.extend(TransitionMixin, {
 
   didTransitionOut() {
     this._super(...arguments);
-    if (this.get('onDidTransitionOut')) {
-      this.get('onDidTransitionOut')();
+    if (this.onDidTransitionOut) {
+      this.onDidTransitionOut();
     }
   }
 });

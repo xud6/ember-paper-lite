@@ -19,27 +19,27 @@ export default Service.extend({
 
   show(text, options) {
     let t = EObject.create(assign({ text, show: true }, this.buildOptions(options)));
-    this.get('queue').pushObject(t);
+    this.queue.pushObject(t);
     return t;
   },
 
   showComponent(componentName, options) {
     let t = EObject.create(assign({ componentName, show: true }, this.buildOptions(options)));
-    this.get('queue').pushObject(t);
+    this.queue.pushObject(t);
     return t;
   },
 
   cancelToast(toast) {
     toast.set('show', false);
 
-    if (this.get('activeToast') === toast) {
+    if (this.activeToast === toast) {
       run.later(() => {
         tryInvoke(toast, 'onClose');
-        this.get('queue').removeObject(toast);
+        this.queue.removeObject(toast);
       }, 400);
     } else {
       tryInvoke(toast, 'onClose');
-      this.get('queue').removeObject(toast);
+      this.queue.removeObject(toast);
     }
   },
 
