@@ -3,7 +3,6 @@ import { assign } from '@ember/polyfills';
 import { run } from '@ember/runloop';
 import { A } from '@ember/array';
 import Service from '@ember/service';
-import { tryInvoke } from '@ember/utils';
 import EObject from '@ember/object';
 import config from 'ember-get-config';
 
@@ -34,11 +33,11 @@ export default Service.extend({
 
     if (this.activeToast === toast) {
       run.later(() => {
-        tryInvoke(toast, 'onClose');
+        if (toast.onClose) { toast.onClose() }
         this.queue.removeObject(toast);
       }, 400);
     } else {
-      tryInvoke(toast, 'onClose');
+      if (toast.onClose) { toast.onClose() }
       this.queue.removeObject(toast);
     }
   },
