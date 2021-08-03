@@ -1,20 +1,20 @@
 # Ember Paper Lite
 Ember paper with following functions removed due to compatibility issue with newer ember versions
-paper-autocomplete
-paper-chips
-paper-select
-paper-menu
+- paper-autocomplete
+- paper-chips
+- paper-select
+- paper-menu
 
 following dependencies was removed as a result
-ember-power-select@3
-ember-basic-dropdown@2
+- ember-power-select@3
+- ember-basic-dropdown@2
 
 related issues
-https://github.com/miguelcobain/ember-paper/issues/1180
-https://github.com/cibernox/ember-basic-dropdown/issues/586
+- https://github.com/miguelcobain/ember-paper/issues/1180
+- https://github.com/cibernox/ember-basic-dropdown/issues/586
 
 ember-paper is essentially in maintenance only mode
-https://github.com/miguelcobain/ember-paper/pull/1179
+- https://github.com/miguelcobain/ember-paper/pull/1179
 
 # Ember Paper [![Build Status](https://travis-ci.org/miguelcobain/ember-paper.svg)](https://travis-ci.org/miguelcobain/ember-paper) [![Ember Observer Score](http://emberobserver.com/badges/ember-paper.svg)](http://emberobserver.com/addons/ember-paper) [![Discord](https://img.shields.io/discord/480462759797063690.svg?logo=discord)](https://discord.gg/zT3asNS)
 
