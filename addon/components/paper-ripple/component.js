@@ -72,7 +72,7 @@ class PaperRipple extends Component {
     }
 
     // When jQuery is loaded, we have to get the original event
-    if (event.hasOwnProperty('originalEvent')) {
+    if (Object.prototype.hasOwnProperty.call(event, "originalEvent")) {
       event = event.originalEvent;
     }
 
