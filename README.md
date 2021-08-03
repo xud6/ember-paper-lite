@@ -16,6 +16,19 @@ related issues
 ember-paper is essentially in maintenance only mode
 - https://github.com/miguelcobain/ember-paper/pull/1179
 
+# Changes
+### 1.0.x
+following functions removed
+- paper-autocomplete
+- paper-chips
+- paper-select
+- paper-menu
+
+### 1.1.x
+- update ember to 3.20.x
+- migrate {{-in-element}} to {{in-element}}
+
+
 # Ember Paper [![Build Status](https://travis-ci.org/miguelcobain/ember-paper.svg)](https://travis-ci.org/miguelcobain/ember-paper) [![Ember Observer Score](http://emberobserver.com/badges/ember-paper.svg)](http://emberobserver.com/addons/ember-paper) [![Discord](https://img.shields.io/discord/480462759797063690.svg?logo=discord)](https://discord.gg/zT3asNS)
 
 This project aims to bring Google's new [Material Design](https://www.google.com/design/spec/material-design/introduction.html) to Ember. The goal is to encapsulate everything possible in Ember components. This project is packaged as an [Ember-cli](http://www.ember-cli.com/) addon.
