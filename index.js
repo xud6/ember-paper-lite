@@ -14,30 +14,6 @@ const fastbootTransform = require('fastboot-transform');
  * https://github.com/kaliber5/ember-bootstrap/blob/master/index.js
 */
 const componentDependencies = {
-  'paper-autocomplete': {
-    styles: [
-      'components/autocomplete/autocomplete.scss',
-      'components/autocomplete/autocomplete-theme.scss'
-    ],
-    dependencies: [
-      'paper-autocomplete/ebd-trigger',
-      'paper-autocomplete/eps-trigger',
-      'paper-autocomplete/ebd-content',
-      'paper-autocomplete/options',
-      'paper-autocomplete/no-matches-message',
-      'paper-autocomplete/highlight'
-    ]
-  },
-
-  'paper-autocomplete/eps-trigger': {
-    dependencies: [
-      'paper-progress-linear',
-      'paper-input',
-      'paper-autocomplete/reset-button',
-      'paper-icon'
-    ]
-  },
-
   'paper-backdrop': {
     styles: [
       'components/backdrop/backdrop.scss',
