@@ -75,21 +75,6 @@ const componentDependencies = {
       'components/checkbox/checkbox-theme.scss'
     ]
   },
-  'paper-chips': {
-    styles: [
-      'components/chips/chips.scss',
-      'components/chips/chips-theme.scss'
-    ],
-    dependencies: [
-      'paper-autocomplete',
-      'paper-icon'
-    ]
-  },
-  'paper-contact-chips': {
-    dependencies: [
-      'paper-chips'
-    ]
-  },
   'paper-content': {
     styles: [
       'components/content/content.scss',
