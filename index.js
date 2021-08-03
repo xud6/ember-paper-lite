@@ -151,30 +151,6 @@ const componentDependencies = {
     ]
   },
 
-  'paper-menu': {
-    styles: [
-      'components/menu/menu.scss',
-      'components/menu/menu-theme.scss'
-    ],
-    dependencies: [
-      'paper-menu/trigger',
-      'paper-menu/content'
-    ]
-  },
-
-  'paper-menu/content': {
-    dependencies: [
-      'paper-backdrop',
-      'paper-menu/item'
-    ]
-  },
-
-  'paper-menu/item': {
-    dependencies: [
-      'paper-button'
-    ]
-  },
-
   'paper-progress-circular': {
     styles: [
       'components/progressCircular/progress-circular.scss',
