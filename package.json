@@ -1,7 +1,7 @@
 {
   "name": "ember-paper-lite",
   "description": "The Ember approach to Material Design.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "build": "ember build --environment=production",
     "lint:hbs": "ember-template-lint .",
