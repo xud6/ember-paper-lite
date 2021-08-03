@@ -1,9 +1,8 @@
 // models/user.js
 
-import DS from 'ember-data';
+import Model, { attr } from '@ember-data/model';
 import EmberCpValidations from 'ember-cp-validations';
 
-const { Model, attr } = DS;
 const { validator, buildValidations } = EmberCpValidations;
 
 const Validations = buildValidations({
