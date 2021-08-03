@@ -343,44 +343,4 @@ module('Integration | Component | paper form', function(hooks) {
     assert.dom('.custom-select')
       .exists({ count: 1 }, 'custom select-component is displayed');
   });
-
-  test('yielded form.autocomplete renders `paper-autocomplete`-component', async function(assert) {
-    assert.expect(1);
-
-    this.owner.register('component:paper-autocomplete', Component.extend({
-      classNames: ['paper-autocomplete']
-    }));
-
-    await render(hbs`
-      {{#paper-form as |form|}}
-        {{form.autocomplete}}
-      {{/paper-form}}
-    `);
-
-    assert.dom('.paper-autocomplete')
-      .exists({ count: 1 }, 'paper-autocomplete is displayed');
-  });
-
-  test('yielded form.autocomplete can be customized by passing `autocompleteComponent`', async function(assert) {
-    assert.expect(2);
-
-    this.owner.register('component:paper-autocomplete', Component.extend({
-      classNames: ['paper-autocomplete']
-    }));
-
-    this.owner.register('component:custom-autocomplete', Component.extend({
-      classNames: ['custom-autocomplete']
-    }));
-
-    await render(hbs`
-      {{#paper-form autocompleteComponent="custom-autocomplete" as |form|}}
-        {{form.autocomplete}}
-      {{/paper-form}}
-    `);
-
-    assert.dom('.paper-autocomplete')
-      .doesNotExist('paper-autocomplete component is not displayed');
-    assert.dom('.custom-autocomplete')
-      .exists({ count: 1 }, 'custom autocomplete-component is displayed');
-  });
 });

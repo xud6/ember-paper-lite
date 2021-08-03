@@ -21,7 +21,6 @@ export default Component.extend(ParentMixin, {
   inputComponent: 'paper-input',
   submitButtonComponent: 'paper-button',
   selectComponent: 'paper-select',
-  autocompleteComponent: 'paper-autocomplete',
 
   isValid: not('isInvalid'),
   isInvalid: computed('childComponents.@each.isInvalid', function() {
