@@ -103,7 +103,6 @@ const componentDependencies = {
   'paper-form': {
     dependencies: [
       'paper-input',
-      'paper-autocomplete',
       'paper-button'
     ]
   },
