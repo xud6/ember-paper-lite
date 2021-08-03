@@ -1,3 +1,3 @@
-import PaperCardImage from 'ember-paper/components/paper-card-image';
+import PaperCardImage from 'ember-paper-lite/components/paper-card-image';
 
 export default PaperCardImage;

@@ -2,7 +2,7 @@
  * @module ember-paper
  */
 import PaperRadioBaseComponent from './paper-radio-base';
-import ProxiableMixin from 'ember-paper/mixins/proxiable-mixin';
+import ProxiableMixin from 'ember-paper-lite/mixins/proxiable-mixin';
 
 /**
  * @class PaperRadio

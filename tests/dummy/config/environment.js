@@ -45,7 +45,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/ember-paper';
+    ENV.rootURL = '/ember-paper-lite';
   }
 
   return ENV;

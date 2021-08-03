@@ -1,4 +1,4 @@
-import { required } from 'ember-paper/validators/required';
+import { required } from 'ember-paper-lite/validators/required';
 import { module, test } from 'qunit';
 
 module('Unit | Validator | required', function() {

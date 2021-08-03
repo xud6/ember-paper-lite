@@ -1,4 +1,4 @@
-import { min } from 'ember-paper/validators/min';
+import { min } from 'ember-paper-lite/validators/min';
 import { module, test } from 'qunit';
 
 module('Unit | Validator | min', function() {

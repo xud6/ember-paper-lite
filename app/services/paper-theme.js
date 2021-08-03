@@ -1,1 +1,1 @@
-export { default } from 'ember-paper/services/paper-theme';
+export { default } from 'ember-paper-lite/services/paper-theme';

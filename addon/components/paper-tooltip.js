@@ -5,8 +5,8 @@ import { run } from '@ember/runloop';
 import { htmlSafe } from '@ember/string';
 import { getOwner } from '@ember/application';
 import layout from '../templates/components/paper-tooltip';
-import getParent from 'ember-paper/utils/get-parent';
-import { supportsPassiveEventListeners } from 'ember-paper/utils/browser-features';
+import getParent from 'ember-paper-lite/utils/get-parent';
+import { supportsPassiveEventListeners } from 'ember-paper-lite/utils/browser-features';
 
 export default Component.extend({
   tagName: '',

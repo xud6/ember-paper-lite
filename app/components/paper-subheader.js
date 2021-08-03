@@ -1,3 +1,3 @@
-import PaperSubHeader from 'ember-paper/components/paper-subheader';
+import PaperSubHeader from 'ember-paper-lite/components/paper-subheader';
 
 export default PaperSubHeader;

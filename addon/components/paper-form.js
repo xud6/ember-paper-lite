@@ -6,7 +6,7 @@ import { not, and } from '@ember/object/computed';
 import Component from '@ember/component';
 import { computed } from '@ember/object';
 import layout from '../templates/components/paper-form';
-import ParentMixin from 'ember-paper/mixins/parent-mixin';
+import ParentMixin from 'ember-paper-lite/mixins/parent-mixin';
 import { invokeAction } from 'ember-invoke-action';
 
 /**

@@ -4,7 +4,7 @@
 import Mixin from '@ember/object/mixin';
 
 import { computed } from '@ember/object';
-import ParentMixin from 'ember-paper/mixins/parent-mixin';
+import ParentMixin from 'ember-paper-lite/mixins/parent-mixin';
 
 /**
  * @class ChildMixin

@@ -1,3 +1,3 @@
-import PaperToolbar from 'ember-paper/components/paper-toolbar';
+import PaperToolbar from 'ember-paper-lite/components/paper-toolbar';
 
 export default PaperToolbar;

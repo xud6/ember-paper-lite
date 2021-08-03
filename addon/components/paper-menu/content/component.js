@@ -6,7 +6,7 @@ import { nextTick } from 'ember-css-transitions/mixins/transition-mixin';
 
 import { tagName, layout } from '@ember-decorators/component';
 
-import { ESCAPE, LEFT_ARROW, UP_ARROW, RIGHT_ARROW, DOWN_ARROW } from 'ember-paper/utils/key-constants';
+import { ESCAPE, LEFT_ARROW, UP_ARROW, RIGHT_ARROW, DOWN_ARROW } from 'ember-paper-lite/utils/key-constants';
 
 function waitForAnimations(element, callback) {
   let computedStyle = window.getComputedStyle(element);
@@ -57,7 +57,7 @@ class PaperMenuContent extends Component {
   async animateOut(element) {
     let parentElement = this.renderInPlace ? element.parentElement.parentElement : element.parentElement;
 
-    // workaround for https://github.com/miguelcobain/ember-paper/issues/1151. See also https://github.com/emberjs/ember.js/issues/18795.
+    // workaround for https://github.com/miguelcobain/ember-paper-lite/issues/1151. See also https://github.com/emberjs/ember.js/issues/18795.
     if (!parentElement) {
       parentElement = document.getElementById('ember-basic-dropdown-wormhole');
     }

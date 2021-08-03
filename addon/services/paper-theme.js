@@ -2,8 +2,8 @@ import Service from '@ember/service';
 import { assert } from '@ember/debug';
 import { assign } from '@ember/polyfills';
 
-import PALETTES from 'ember-paper/utils/palettes';
-import CONTRASTS from 'ember-paper/utils/contrasts';
+import PALETTES from 'ember-paper-lite/utils/palettes';
+import CONTRASTS from 'ember-paper-lite/utils/contrasts';
 
 import tinycolor from 'tinycolor2';
 

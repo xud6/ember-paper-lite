@@ -1,3 +1,3 @@
-import PaperCheckbox from 'ember-paper/components/paper-checkbox';
+import PaperCheckbox from 'ember-paper-lite/components/paper-checkbox';
 
 export default PaperCheckbox;

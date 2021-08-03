@@ -8,7 +8,7 @@ import Component from '@ember/component';
 import { isPresent } from '@ember/utils';
 import { htmlSafe } from '@ember/string';
 import layout from '../templates/components/paper-progress-linear';
-import ColorMixin from 'ember-paper/mixins/color-mixin';
+import ColorMixin from 'ember-paper-lite/mixins/color-mixin';
 
 function makeTransform(value) {
   let scale = value / 100;

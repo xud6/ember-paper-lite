@@ -6,7 +6,7 @@ import { computed, action } from '@ember/object';
 import { bind } from '@ember/runloop';
 import { htmlSafe } from '@ember/string';
 import template from './template';
-import clamp from 'ember-paper/utils/clamp';
+import clamp from 'ember-paper-lite/utils/clamp';
 import { tagName, layout } from '@ember-decorators/component';
 
 /* global Hammer */

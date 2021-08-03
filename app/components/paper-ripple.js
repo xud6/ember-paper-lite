@@ -1,1 +1,1 @@
-export { default } from 'ember-paper/components/paper-ripple/component';
+export { default } from 'ember-paper-lite/components/paper-ripple/component';

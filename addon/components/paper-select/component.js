@@ -4,11 +4,11 @@ import template from './template';
 import { tagName, layout } from '@ember-decorators/component';
 import { action } from '@ember/object';
 import { and } from '@ember/object/computed';
-import ChildMixin from 'ember-paper/mixins/child-mixin';
+import ChildMixin from 'ember-paper-lite/mixins/child-mixin';
 
-import ValidationMixin from 'ember-paper/mixins/validation-mixin';
+import ValidationMixin from 'ember-paper-lite/mixins/validation-mixin';
 
-import clamp from 'ember-paper/utils/clamp';
+import clamp from 'ember-paper-lite/utils/clamp';
 
 const SELECT_EDGE_MARGIN = 8;
 

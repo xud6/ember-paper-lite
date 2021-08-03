@@ -3,7 +3,7 @@ import template from './template';
 import { tagName, layout } from '@ember-decorators/component';
 import { bind, later, cancel } from '@ember/runloop';
 import { computed, action } from '@ember/object';
-import { supportsPassiveEventListeners } from 'ember-paper/utils/browser-features';
+import { supportsPassiveEventListeners } from 'ember-paper-lite/utils/browser-features';
 import { nextTick } from 'ember-css-transitions/mixins/transition-mixin';
 
 const DURATION = 400;

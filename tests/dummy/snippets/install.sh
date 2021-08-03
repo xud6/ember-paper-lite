@@ -1,1 +1,1 @@
-$ ember install ember-paper
+$ ember install ember-paper-lite

@@ -9,11 +9,11 @@ import { get, computed, defineProperty } from '@ember/object';
 import { bool, reads, not } from '@ember/object/computed';
 import { loc } from '@ember/string';
 import { isBlank } from '@ember/utils';
-import requiredValidator from 'ember-paper/validators/required';
-import minValidator from 'ember-paper/validators/min';
-import maxValidator from 'ember-paper/validators/max';
-import minlengthValidator from 'ember-paper/validators/minlength';
-import maxlengthValidator from 'ember-paper/validators/maxlength';
+import requiredValidator from 'ember-paper-lite/validators/required';
+import minValidator from 'ember-paper-lite/validators/min';
+import maxValidator from 'ember-paper-lite/validators/max';
+import minlengthValidator from 'ember-paper-lite/validators/minlength';
+import maxlengthValidator from 'ember-paper-lite/validators/maxlength';
 import { invokeAction } from 'ember-invoke-action';
 
 /**

@@ -1,3 +1,3 @@
-import PaperSidenavInner from 'ember-paper/components/paper-sidenav-inner';
+import PaperSidenavInner from 'ember-paper-lite/components/paper-sidenav-inner';
 
 export default PaperSidenavInner;

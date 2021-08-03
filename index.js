@@ -368,7 +368,7 @@ module.exports = {
 
     this.emberPaperOptions = Object.assign({}, app.options['ember-paper']);
 
-    app.import('vendor/ember-paper/register-version.js');
+    app.import('vendor/ember-paper-lite/register-version.js');
     app.import('vendor/hammerjs/hammer.js');
     app.import('vendor/propagating-hammerjs/propagating.js');
   },
@@ -424,7 +424,7 @@ module.exports = {
     let trees = [];
 
     let versionTree = writeFile(
-      'ember-paper/register-version.js',
+      'ember-paper-lite/register-version.js',
       `Ember.libraries.register('Ember Paper', '${version}');`
     );
 

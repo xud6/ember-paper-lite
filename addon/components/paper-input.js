@@ -9,10 +9,10 @@ import { isEmpty } from '@ember/utils';
 import { run } from '@ember/runloop';
 import { assert } from '@ember/debug';
 import layout from '../templates/components/paper-input';
-import FocusableMixin from 'ember-paper/mixins/focusable-mixin';
-import ColorMixin from 'ember-paper/mixins/color-mixin';
-import ChildMixin from 'ember-paper/mixins/child-mixin';
-import ValidationMixin from 'ember-paper/mixins/validation-mixin';
+import FocusableMixin from 'ember-paper-lite/mixins/focusable-mixin';
+import ColorMixin from 'ember-paper-lite/mixins/color-mixin';
+import ChildMixin from 'ember-paper-lite/mixins/child-mixin';
+import ValidationMixin from 'ember-paper-lite/mixins/validation-mixin';
 import { invokeAction } from 'ember-invoke-action';
 
 /**

@@ -1,5 +1,5 @@
 {
-  "name": "ember-paper",
+  "name": "ember-paper-lite",
   "description": "The Ember approach to Material Design.",
   "version": "1.0.0-beta.35",
   "scripts": {
@@ -14,7 +14,7 @@
     "node": "10.* || >= 12"
   },
   "bugs": {
-    "url": "https://github.com/miguelcobain/ember-paper/issues"
+    "url": "https://github.com/xud6/ember-paper-lite/issues"
   },
   "devDependencies": {
     "@ember/jquery": "^1.1.0",
@@ -93,9 +93,9 @@
     "ember",
     "paper"
   ],
-  "repository": "https://github.com/miguelcobain/ember-paper",
+  "repository": "https://github.com/xud6/ember-paper-lite",
   "license": "MIT",
-  "author": "Miguel Andrade <jmandrade0@gmail.com>",
+  "author": "xud6",
   "directories": {
     "doc": "doc",
     "test": "tests"

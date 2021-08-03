@@ -1,4 +1,4 @@
-ENV['ember-paper'] = {
+ENV['ember-paper-lite'] = {
     whitelist: [
         'paper-card',
         'paper-tooltip',

@@ -3,7 +3,7 @@ import Component from '@ember/component';
 import { htmlSafe } from '@ember/string';
 import layout from '../templates/components/paper-tab';
 import { ChildMixin } from 'ember-composability-tools';
-import FocusableMixin from 'ember-paper/mixins/focusable-mixin';
+import FocusableMixin from 'ember-paper-lite/mixins/focusable-mixin';
 import { invokeAction } from 'ember-invoke-action';
 
 export default Component.extend(ChildMixin, FocusableMixin, {

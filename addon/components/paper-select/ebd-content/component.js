@@ -7,7 +7,7 @@ import { computed, action } from '@ember/object';
 import { next, scheduleOnce } from '@ember/runloop';
 import { nextTick } from 'ember-css-transitions/mixins/transition-mixin';
 
-import { ESCAPE, LEFT_ARROW, UP_ARROW, RIGHT_ARROW, DOWN_ARROW, ENTER } from 'ember-paper/utils/key-constants';
+import { ESCAPE, LEFT_ARROW, UP_ARROW, RIGHT_ARROW, DOWN_ARROW, ENTER } from 'ember-paper-lite/utils/key-constants';
 
 import { advanceSelectableOption } from 'ember-power-select/utils/group-utils';
 

@@ -5,9 +5,9 @@ import { reads } from '@ember/object/computed';
 
 import Component from '@ember/component';
 import layout from '../templates/components/paper-button';
-import FocusableMixin from 'ember-paper/mixins/focusable-mixin';
-import ColorMixin from 'ember-paper/mixins/color-mixin';
-import ProxiableMixin from 'ember-paper/mixins/proxiable-mixin';
+import FocusableMixin from 'ember-paper-lite/mixins/focusable-mixin';
+import ColorMixin from 'ember-paper-lite/mixins/color-mixin';
+import ProxiableMixin from 'ember-paper-lite/mixins/proxiable-mixin';
 import { invokeAction } from 'ember-invoke-action';
 
 /**

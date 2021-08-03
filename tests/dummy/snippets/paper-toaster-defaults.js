@@ -1,4 +1,4 @@
-ENV['ember-paper'] = {
+ENV['ember-paper-lite'] = {
   'paper-toaster': {
     position: 'bottom right',
     duration: 5000,

@@ -2,7 +2,7 @@ import Controller from '@ember/controller';
 import { inject } from '@ember/service';
 import { and, not } from '@ember/object/computed';
 
-import PALETTES from 'ember-paper/utils/palettes';
+import PALETTES from 'ember-paper-lite/utils/palettes';
 import { computed } from '@ember/object';
 
 export default Controller.extend({

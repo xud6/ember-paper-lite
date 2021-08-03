@@ -1,1 +1,1 @@
-export { default } from 'ember-paper/utils/clamp';
+export { default } from 'ember-paper-lite/utils/clamp';

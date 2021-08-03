@@ -1,1 +1,1 @@
-export { default } from 'ember-paper/services/paper-sidenav';
+export { default } from 'ember-paper-lite/services/paper-sidenav';

@@ -1,3 +1,3 @@
-import PaperCardHeaderText from 'ember-paper/components/paper-card-header-text';
+import PaperCardHeaderText from 'ember-paper-lite/components/paper-card-header-text';
 
 export default PaperCardHeaderText;

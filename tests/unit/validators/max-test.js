@@ -1,4 +1,4 @@
-import { max } from 'ember-paper/validators/max';
+import { max } from 'ember-paper-lite/validators/max';
 import { module, test } from 'qunit';
 
 module('Unit | Validator | max', function() {

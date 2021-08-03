@@ -6,7 +6,7 @@ import { htmlSafe } from '@ember/string';
 import { scheduleOnce, join } from '@ember/runloop';
 import layout from '../templates/components/paper-tabs';
 import { ParentMixin } from 'ember-composability-tools';
-import ColorMixin from 'ember-paper/mixins/color-mixin';
+import ColorMixin from 'ember-paper-lite/mixins/color-mixin';
 import { invokeAction } from 'ember-invoke-action';
 
 export default Component.extend(ParentMixin, ColorMixin, {

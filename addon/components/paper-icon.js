@@ -8,7 +8,7 @@ import { reads } from '@ember/object/computed';
 import { htmlSafe } from '@ember/string';
 
 import layout from '../templates/components/paper-icon';
-import ColorMixin from 'ember-paper/mixins/color-mixin';
+import ColorMixin from 'ember-paper-lite/mixins/color-mixin';
 
 /**
  * @class PaperIcon

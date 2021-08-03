@@ -1,3 +1,3 @@
-import PaperCardTitleText from 'ember-paper/components/paper-card-title-text';
+import PaperCardTitleText from 'ember-paper-lite/components/paper-card-title-text';
 
 export default PaperCardTitleText;

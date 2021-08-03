@@ -4,7 +4,7 @@
 import Component from '@ember/component';
 
 import layout from '../templates/components/paper-toolbar';
-import ColorMixin from 'ember-paper/mixins/color-mixin';
+import ColorMixin from 'ember-paper-lite/mixins/color-mixin';
 
 /**
  * @class PaperToolbar

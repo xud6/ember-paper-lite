@@ -1,3 +1,3 @@
-import PaperList from 'ember-paper/components/paper-list';
+import PaperList from 'ember-paper-lite/components/paper-list';
 
 export default PaperList;

@@ -1,4 +1,4 @@
-import { maxlength } from 'ember-paper/validators/maxlength';
+import { maxlength } from 'ember-paper-lite/validators/maxlength';
 import { module, test } from 'qunit';
 
 module('Unit | Validator | maxlength', function() {

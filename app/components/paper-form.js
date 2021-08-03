@@ -1,3 +1,3 @@
-import PaperForm from 'ember-paper/components/paper-form';
+import PaperForm from 'ember-paper-lite/components/paper-form';
 
 export default PaperForm;

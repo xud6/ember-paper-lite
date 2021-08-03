@@ -7,7 +7,7 @@ import { filterBy, mapBy, notEmpty } from '@ember/object/computed';
 import Component from '@ember/component';
 import { assert } from '@ember/debug';
 import layout from '../templates/components/paper-radio-group';
-import FocusableMixin from 'ember-paper/mixins/focusable-mixin';
+import FocusableMixin from 'ember-paper-lite/mixins/focusable-mixin';
 import { ParentMixin } from 'ember-composability-tools';
 import { isPresent } from '@ember/utils';
 import { invokeAction } from 'ember-invoke-action';

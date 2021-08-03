@@ -1,7 +1,7 @@
 import { layout, tagName } from '@ember-decorators/component';
 import Component from '@ember/component';
 import { action, computed } from '@ember/object';
-import MenuPositionCalculator from 'ember-paper/utils/menu-position-calculator';
+import MenuPositionCalculator from 'ember-paper-lite/utils/menu-position-calculator';
 import template from './template';
 
 @tagName('')

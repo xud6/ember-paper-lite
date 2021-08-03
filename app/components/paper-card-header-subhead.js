@@ -1,3 +1,3 @@
-import PaperCardHeaderSubhead from 'ember-paper/components/paper-card-header-subhead';
+import PaperCardHeaderSubhead from 'ember-paper-lite/components/paper-card-header-subhead';
 
 export default PaperCardHeaderSubhead;

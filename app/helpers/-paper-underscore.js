@@ -1,1 +1,1 @@
-export { default, underscore } from 'ember-paper/helpers/underscore';
+export { default, underscore } from 'ember-paper-lite/helpers/underscore';
