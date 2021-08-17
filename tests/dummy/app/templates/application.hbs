@@ -10,54 +10,54 @@
     <PaperContent>
 
       <PaperList>
-        <MenuItem @active={{is-active "index" currentRouteName}} @href={{href-to "index"}}>Introduction</MenuItem>
+        <MenuItem @active={{is-active "index" router.currentRouteName}} @href={{href-to "index"}}>Introduction</MenuItem>
 
         <MenuItem @onClick={{action "toggleExpandedItem" "demos"}} @expanded={{demosExpanded}} @canExpand={{true}}>Components</MenuItem>
 
         <div class="submenu">
           {{#liquid-if demosExpanded}}
-            <SubmenuItem @active={{is-active "demo.autocomplete" currentRouteName}} @href={{href-to "demo.autocomplete"}}>Autocomplete</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.button" currentRouteName}} @href={{href-to "demo.button"}}>Button</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.card" currentRouteName}} @href={{href-to "demo.card"}}>Card</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.checkbox" currentRouteName}} @href={{href-to "demo.checkbox"}}>Checkbox</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.chips" currentRouteName}} @href={{href-to "demo.chips"}}>Chips</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.dialog" currentRouteName}} @href={{href-to "demo.dialog"}}>Dialog</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.divider" currentRouteName}} @href={{href-to "demo.divider"}}>Divider</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.grid-list" currentRouteName}} @href={{href-to "demo.grid-list"}}>Grid List</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.icons" currentRouteName}} @href={{href-to "demo.icons"}}>Icons</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.input" currentRouteName}} @href={{href-to "demo.input"}}>Input</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.list" currentRouteName}} @href={{href-to "demo.list"}}>List</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.menu" currentRouteName}} @href={{href-to "demo.menu"}}>Menu</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.progress-circular" currentRouteName}} @href={{href-to "demo.progress-circular"}}>Progress Circular</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.progress-linear" currentRouteName}} @href={{href-to "demo.progress-linear"}}>Progress Linear</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.radio" currentRouteName}} @href={{href-to "demo.radio"}}>Radio</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.select" currentRouteName}} @href={{href-to "demo.select"}}>Select</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.sidenav" currentRouteName}} @href={{href-to "demo.sidenav"}}>Sidenav</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.slider" currentRouteName}} @href={{href-to "demo.slider"}}>Slider</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.speed-dial" currentRouteName}} @href={{href-to "demo.speed-dial"}}>Speed Dial</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.switch" currentRouteName}} @href={{href-to "demo.switch"}}>Switch</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.tabs.index" currentRouteName}} @href={{href-to "demo.tabs"}}>Tabs</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.toast" currentRouteName}} @href={{href-to "demo.toast"}}>Toast</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.toolbar" currentRouteName}} @href={{href-to "demo.toolbar"}}>Toolbar</SubmenuItem>
-            <SubmenuItem @active={{is-active "demo.tooltip" currentRouteName}} @href={{href-to "demo.tooltip"}}>Tooltip</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.autocomplete" router.currentRouteName}} @href={{href-to "demo.autocomplete"}}>Autocomplete</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.button" router.currentRouteName}} @href={{href-to "demo.button"}}>Button</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.card" router.currentRouteName}} @href={{href-to "demo.card"}}>Card</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.checkbox" router.currentRouteName}} @href={{href-to "demo.checkbox"}}>Checkbox</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.chips" router.currentRouteName}} @href={{href-to "demo.chips"}}>Chips</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.dialog" router.currentRouteName}} @href={{href-to "demo.dialog"}}>Dialog</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.divider" router.currentRouteName}} @href={{href-to "demo.divider"}}>Divider</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.grid-list" router.currentRouteName}} @href={{href-to "demo.grid-list"}}>Grid List</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.icons" router.currentRouteName}} @href={{href-to "demo.icons"}}>Icons</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.input" router.currentRouteName}} @href={{href-to "demo.input"}}>Input</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.list" router.currentRouteName}} @href={{href-to "demo.list"}}>List</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.menu" router.currentRouteName}} @href={{href-to "demo.menu"}}>Menu</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.progress-circular" router.currentRouteName}} @href={{href-to "demo.progress-circular"}}>Progress Circular</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.progress-linear" router.currentRouteName}} @href={{href-to "demo.progress-linear"}}>Progress Linear</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.radio" router.currentRouteName}} @href={{href-to "demo.radio"}}>Radio</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.select" router.currentRouteName}} @href={{href-to "demo.select"}}>Select</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.sidenav" router.currentRouteName}} @href={{href-to "demo.sidenav"}}>Sidenav</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.slider" router.currentRouteName}} @href={{href-to "demo.slider"}}>Slider</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.speed-dial" router.currentRouteName}} @href={{href-to "demo.speed-dial"}}>Speed Dial</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.switch" router.currentRouteName}} @href={{href-to "demo.switch"}}>Switch</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.tabs.index" router.currentRouteName}} @href={{href-to "demo.tabs"}}>Tabs</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.toast" router.currentRouteName}} @href={{href-to "demo.toast"}}>Toast</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.toolbar" router.currentRouteName}} @href={{href-to "demo.toolbar"}}>Toolbar</SubmenuItem>
+            <SubmenuItem @active={{is-active "demo.tooltip" router.currentRouteName}} @href={{href-to "demo.tooltip"}}>Tooltip</SubmenuItem>
           {{/liquid-if}}
         </div>
-        <MenuItem @active={{is-active "forms" currentRouteName}} @href={{href-to "forms"}}>Forms</MenuItem>
-        <MenuItem @active={{is-active "typography" currentRouteName}} @href={{href-to "typography"}}>Typography</MenuItem>
-        <MenuItem @active={{is-active "theme" currentRouteName}} @href={{href-to "theme"}}>Color & Theme</MenuItem>
+        <MenuItem @active={{is-active "forms" router.currentRouteName}} @href={{href-to "forms"}}>Forms</MenuItem>
+        <MenuItem @active={{is-active "typography" router.currentRouteName}} @href={{href-to "typography"}}>Typography</MenuItem>
+        <MenuItem @active={{is-active "theme" router.currentRouteName}} @href={{href-to "theme"}}>Color & Theme</MenuItem>
 
         <MenuItem @onClick={{action "toggleExpandedItem" "layout"}} @expanded={{layoutExpanded}} @canExpand={{true}}>Layout</MenuItem>
         <div class="submenu">
           {{#liquid-if layoutExpanded}}
-            <SubmenuItem @active={{is-active "layout.introduction" currentRouteName}} @href={{href-to "layout.introduction"}}>Introduction</SubmenuItem>
-            <SubmenuItem @active={{is-active "layout.layout-containers" currentRouteName}} @href={{href-to "layout.layout-containers"}}>Layout Containers</SubmenuItem>
-            <SubmenuItem @active={{is-active "layout.layout-children" currentRouteName}} @href={{href-to "layout.layout-children"}}>Layout Children</SubmenuItem>
-            <SubmenuItem @active={{is-active "layout.child-alignment" currentRouteName}} @href={{href-to "layout.child-alignment"}}>Child Alignment</SubmenuItem>
+            <SubmenuItem @active={{is-active "layout.introduction" router.currentRouteName}} @href={{href-to "layout.introduction"}}>Introduction</SubmenuItem>
+            <SubmenuItem @active={{is-active "layout.layout-containers" router.currentRouteName}} @href={{href-to "layout.layout-containers"}}>Layout Containers</SubmenuItem>
+            <SubmenuItem @active={{is-active "layout.layout-children" router.currentRouteName}} @href={{href-to "layout.layout-children"}}>Layout Children</SubmenuItem>
+            <SubmenuItem @active={{is-active "layout.child-alignment" router.currentRouteName}} @href={{href-to "layout.child-alignment"}}>Child Alignment</SubmenuItem>
           {{/liquid-if}}
         </div>
 
-        <MenuItem @active={{is-active "cookbook" currentRouteName}} @href={{href-to "cookbook"}}>Cookbook</MenuItem>
-        <MenuItem @active={{is-active "addons" currentRouteName}} @href={{href-to "addons"}}>Addons</MenuItem>
+        <MenuItem @active={{is-active "cookbook" router.currentRouteName}} @href={{href-to "cookbook"}}>Cookbook</MenuItem>
+        <MenuItem @active={{is-active "addons" router.currentRouteName}} @href={{href-to "addons"}}>Addons</MenuItem>
       </PaperList>
 
     </PaperContent>

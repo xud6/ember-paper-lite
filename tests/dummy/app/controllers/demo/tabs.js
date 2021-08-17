@@ -18,8 +18,6 @@ export default Controller.extend({
 
   router: service(),
 
-  currentRouteName: readOnly('router.currentRouteName'),
-
   chapters: computed(function() {
     let tabs = A();
     for (let i = 1; i < 5; i++) {
