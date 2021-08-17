@@ -122,7 +122,7 @@ export default Component.extend(FocusableMixin, ColorMixin, ChildMixin, Validati
   },
 
   growTextarea() {
-    if (this.textarea) {
+    if (this.textarea && this.passThru) {
       let inputElement = this.element.querySelector('input, textarea');
       inputElement.classList.add('md-no-flex');
       inputElement.setAttribute('rows', 1);
