@@ -129,7 +129,5 @@ export default Controller.extend({
     return A(tiles);
   },
 
-  colorTiles: computed(function() {
-    return A([]);
-  })
+  colorTiles: A([])
 });

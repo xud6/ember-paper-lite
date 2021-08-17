@@ -15,13 +15,7 @@ export default Controller.extend({
     }
   },
 
-  expandedItem: computed('router.currentRouteName', function() {
-    if (this.router.currentRouteName.substr(0, 6) === 'layout') {
-      return 'layout';
-    } else {
-      return 'demos';
-    }
-  }),
+  expandedItem: 'demos',
 
   demosExpanded: equal('expandedItem', 'demos'),
   layoutExpanded: equal('expandedItem', 'layout')
