@@ -28,6 +28,9 @@ following functions removed
 - update ember to 3.20.x
 - migrate {{-in-element}} to {{in-element}}
 
+* Ember.js v3.20 or above
+* Ember CLI v3.20 or above
+* Node.js v10 or above
 
 # Ember Paper [![Build Status](https://travis-ci.org/miguelcobain/ember-paper.svg)](https://travis-ci.org/miguelcobain/ember-paper) [![Ember Observer Score](http://emberobserver.com/badges/ember-paper.svg)](http://emberobserver.com/addons/ember-paper) [![Discord](https://img.shields.io/discord/480462759797063690.svg?logo=discord)](https://discord.gg/zT3asNS)
 
