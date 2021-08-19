@@ -1,7 +1,7 @@
 {
   "name": "ember-paper-lite",
   "description": "The Ember approach to Material Design.",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "scripts": {
     "build": "ember build --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint:!(fix)'",
