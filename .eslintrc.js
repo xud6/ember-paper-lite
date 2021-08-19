@@ -23,7 +23,8 @@ module.exports = {
     'ember/no-mixins': 'off',
     'ember/require-computed-property-dependencies': 'off',
     'ember/no-jquery': 'error',
-    'ember/no-new-mixins': 'off'
+    'ember/no-new-mixins': 'off',
+    'ember/require-computed-macros': 'off',
   },
   overrides: [
     // node files
