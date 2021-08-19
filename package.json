@@ -70,6 +70,7 @@
     "qunit-dom": "^1.6.0"
   },
   "dependencies": {
+    "@ember-paper-lite/ember-composability-tools": "0.0.15",
     "@html-next/vertical-collection": "^1.0.0",
     "angular-material-styles": "1.1.21",
     "broccoli-file-creator": "^2.1.1",
@@ -83,7 +84,6 @@
     "ember-cli-htmlbars": "^5.3.1",
     "ember-cli-polyfill-importer": "^0.0.4",
     "ember-cli-sass": "^10.0.1",
-    "ember-composability-tools": "^0.0.12",
     "ember-css-transitions": "^0.1.16",
     "ember-decorators": "^6.1.1",
     "ember-get-config": "^0.2.4",

@@ -8,7 +8,7 @@ import Component from '@ember/component';
 import { computed } from '@ember/object';
 import { run } from '@ember/runloop';
 import layout from '../templates/components/paper-grid-list';
-import { ParentMixin } from 'ember-composability-tools';
+import { ParentMixin } from '@ember-paper-lite/ember-composability-tools';
 import gridLayout from '../utils/grid-layout';
 import { invokeAction } from 'ember-invoke-action';
 

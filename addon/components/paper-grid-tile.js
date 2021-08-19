@@ -7,7 +7,7 @@ import Component from '@ember/component';
 import { computed } from '@ember/object';
 import { run } from '@ember/runloop';
 import layout from '../templates/components/paper-grid-tile';
-import { ChildMixin } from 'ember-composability-tools';
+import { ChildMixin } from '@ember-paper-lite/ember-composability-tools';
 import { invokeAction } from 'ember-invoke-action';
 
 const positionCSS = (positions) => {

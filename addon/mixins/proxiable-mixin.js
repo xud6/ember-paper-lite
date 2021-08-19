@@ -4,7 +4,7 @@
 import Mixin from '@ember/object/mixin';
 
 import { run } from '@ember/runloop';
-import { ChildMixin } from 'ember-composability-tools';
+import { ChildMixin } from '@ember-paper-lite/ember-composability-tools';
 
 /**
  * @class ProxiableMixin

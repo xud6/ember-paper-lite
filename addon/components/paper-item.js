@@ -6,7 +6,7 @@ import { filter, bool, or } from '@ember/object/computed';
 import Component from '@ember/component';
 import { computed } from '@ember/object';
 import layout from '../templates/components/paper-item';
-import { ParentMixin } from 'ember-composability-tools';
+import { ParentMixin } from '@ember-paper-lite/ember-composability-tools';
 import { invokeAction } from 'ember-invoke-action';
 /**
  * @class PaperItem
