@@ -39,15 +39,15 @@
             </tabs.tab>
           </PaperTabs>
 
-          {{#liquid-bind (hash tab=selectedBasicTab) class="md-padding" as |current|}}
-            <h1 class="md-display-2">Tab {{current.tab}}</h1>
+          <div class="md-padding">
+            <h1 class="md-display-2">Tab {{selectedBasicTab}}</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis
               vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices.
               Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.
             </p>
-          {{/liquid-bind}}
+          </div>
           {{! END-SNIPPET }}
         </PaperContent>
         <PaperCardContent>
@@ -125,13 +125,13 @@
             {{/each}}
           </PaperTabs>
 
-          {{#liquid-bind (hash tab=selectedChapter.index m=selectedChapter) class="md-padding dynamic-animation" as |current|}}
-            <h1 class="md-display-2">{{current.m.title}}</h1>
-            <p>{{current.m.body}}</p>
-            <PaperButton @primary={{true}} @raised={{true}} @disabled={{eq chapters.length 1}} @onClick={{action "removeChapter" current.m}}>
+          <div class="md-padding dynamic-animation">
+            <h1 class="md-display-2">{{selectedChapter.title}}</h1>
+            <p>{{selectedChapter.body}}</p>
+            <PaperButton @primary={{true}} @raised={{true}} @disabled={{eq chapters.length 1}} @onClick={{action "removeChapter" selectedChapter}}>
               Remove chapter
             </PaperButton>
-          {{/liquid-bind}}
+          </div>
 
           {{! END-SNIPPET }}
         </PaperContent>
@@ -194,7 +194,7 @@
             </tabs.tab>
           </PaperTabs>
 
-          {{liquid-outlet class="md-padding"}}
+          {{outlet class="md-padding"}}
           {{! END-SNIPPET }}
         </PaperContent>
       </div>
