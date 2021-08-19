@@ -7,7 +7,6 @@ import { assert, warn } from '@ember/debug';
 import { isArray, A } from '@ember/array';
 import { get, computed, defineProperty } from '@ember/object';
 import { bool, reads, not } from '@ember/object/computed';
-import { loc } from '@ember/string';
 import { isBlank } from '@ember/utils';
 import requiredValidator from 'ember-paper-lite/validators/required';
 import minValidator from 'ember-paper-lite/validators/min';
@@ -15,6 +14,32 @@ import maxValidator from 'ember-paper-lite/validators/max';
 import minlengthValidator from 'ember-paper-lite/validators/minlength';
 import maxlengthValidator from 'ember-paper-lite/validators/maxlength';
 import { invokeAction } from 'ember-invoke-action';
+
+let STRINGS = {};
+
+export function getString(name) {
+  return STRINGS[name];
+}
+
+function _fmt(str, formats) {
+  // first, replace any ORDERED replacements.
+  let idx = 0; // the current index for non-numerical replacements
+  return str.replace(/%@([0-9]+)?/g, (_s, argIndex) => {
+    let i = argIndex ? parseInt(argIndex, 10) - 1 : idx++;
+    let r = i < formats.length ? formats[i] : undefined;
+    return typeof r === 'string' ? r : r === null ? '(null)' : r === undefined ? '' : String(r);
+  });
+}
+
+export function loc(str, formats) {
+  if (!Array.isArray(formats) || arguments.length > 2) {
+    formats = Array.prototype.slice.call(arguments, 1);
+  }
+
+  str = getString(str) || str;
+  return _fmt(str, formats);
+}
+
 
 /**
  * In order to make validation generic it is required that components using the validation mixin
@@ -28,7 +53,7 @@ function buildComputedValidationMessages(property, validations = [], customValid
   let validationParams = validations.map((v) => get(v, 'param')).filter((v) => !isBlank(v));
   let customValidationParams = customValidations.map((v) => get(v, 'param')).filter((v) => !isBlank(v));
 
-  return computed(property, 'errors.[]', 'customValidations.[]', ...validationParams, ...customValidationParams, function() {
+  return computed(property, 'errors.[]', 'customValidations.[]', ...validationParams, ...customValidationParams, function () {
     let validations = A();
     let messages = A();
 
@@ -53,7 +78,7 @@ function buildComputedValidationMessages(property, validations = [], customValid
             message: loc(message.string || message, paramValue, currentValue)
           });
         }
-      } catch(error) {
+      } catch (error) {
         warn(`Exception with validation: ${validation} ${error}`, false);
       }
     });
